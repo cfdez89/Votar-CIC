@@ -1,0 +1,37 @@
+<div id="home" ng-controller="homeController" >
+    <br class="clear" />
+    <br><br/>
+<!--div for company avatar-->
+    <div class="row">
+        <div class="col-md-4"></div> 
+        <div class="col-md-4" align="center">
+            <div flash-message="4000" ></div> 
+            <br><br/>
+        </div>
+        <div class="col-md-4"></div> 
+    </div>
+    <div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-md-10" >
+            <h1 align="center">Competencias</h1>
+            <br><br/>
+        </div>
+        <div class="col-md-1"></div> 
+    </div>
+    <div class="row">
+        <div class="col-md-1"></div> 
+            <div class="col-md-10">
+                <nav>
+                    <ul class="nav nav-pills nav-justified">
+                        <li><a data-toggle="tab" ui-sref=".unpublished">Sin publicar</a></li>
+                        <li><a data-toggle="tab" ui-sref=".pending">Pendiente</a></li>
+                        <li><a data-toggle="tab" ui-sref=".started">Iniciado</a></li>
+                        <li><a data-toggle="tab" ui-sref=".finished">Finalizado</a></li>
+                    </ul>
+                </nav> 
+                <div ui-view></div> 
+            </div>
+        <div class="col-md-1"></div> 
+    </div>
+ </div>
+

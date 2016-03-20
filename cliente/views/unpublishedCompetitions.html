@@ -1,0 +1,17 @@
+<div id="unpublishedCompetitions" >  
+    <div class="panel-body"  align="center" ng-repeat="comp in filters=(competencias | filter:mdlTag)" >
+        <div class="panel panel-default">
+            <div class="panel-body" >
+                <div class="col-md-3" align="left">
+                    <img ng-src="{{comp.picture}}" class="img-rounded">
+                </div>
+                <div class="col-md-9" align="left" > 
+                    <h2>{{comp.name}}</h2>
+                    <h5>Descripcion: {{comp.description}}</h5>
+                    <h5>Fecha de inicio de la competencia: {{comp.start_date | date: 'dd-MM-yyyy'}}</h5>
+                    <button type="button" class="btn btn-primary" ng-click="sendToProject(comp._id)"> Ver proyectos</button>
+                </div>  
+            </div>
+        </div>
+    </div> 
+</div>

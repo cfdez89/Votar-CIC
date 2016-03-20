@@ -1,0 +1,75 @@
+<div id="projects" ng-controller="projectsController" >
+    <br class="clear" />
+    <br><br/>
+<!--div for company avatar-->
+    <div class="row">
+        <div class="col-md-4"></div> 
+        <div class="col-md-4" align="center">
+            <div flash-message="4000" ></div> 
+            <br><br/>
+        </div>
+        <div class="col-md-4"></div> 
+    </div>
+    <div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-md-10" >
+            <h1 align="center">{{competenciaActual.name}}</h1>
+            <br><br/>
+        </div>
+        <div class="col-md-1"></div> 
+    </div>
+    <div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-md-10" >
+            <div class="col-md-2"></div>
+            <div class="col-md-8" align="center">
+                <h5>{{competenciaActual.description}}</h5>
+                <hr>
+                <p style="color:#808080">Cantidad máxima de proyectos: {{competenciaActual.projects_limmit}}
+                <br/>Metodológia de evaluación de la competencia: {{competenciaActual.evaluation_method}}
+                <br/>Fecha de inicio de competencia: {{competenciaActual.start_date}}
+                <br/>Fecha de fin de competencia: {{competenciaActual.end_date}}
+                <br/>Fecha de incio de recepcion de votaciones: {{competenciaActual.vote_period_start}}
+                <br/>Fecha de fin de votaciones: {{competenciaActual.vote_period_end}}</p>
+            </div>
+            <div class="col-md-2"></div>   
+        </div>
+        <div class="col-md-1"></div> 
+    </div>
+    <div class="row">
+        <br></br>`
+        <div class="col-md-1"></div>
+        <div class="col-md-10" >
+            <div class="col-md-3">
+                <select id="opcTag" class="form-control" data-ng-options="tag for tag in tagOptions" data-ng-model="selectedTag" ></select>
+            </div>
+            <div class="col-md-9"></div>
+            
+            
+        </div>
+        <div class="col-md-1"></div> 
+    </div>
+     <div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-md-10" >
+            <div class="panel-body"  align="center" ng-repeat="proj in filters=(projects | filter:selectedTag)" >
+                <div class="panel panel-default">
+                    <div class="panel-body" >
+                        <div class="col-md-3" align="left">
+                            <img ng-src="{{proj.picture}}" class="img-rounded">
+                        </div>
+                        <div class="col-md-9" align="left" > 
+                            <h2>{{proj.name}}</h2>
+                            <h5>Descripcion: {{proj.short_description}}</h5>
+                            <button type="button" class="btn btn-primary" ng-click="sendToProject(proj._id)"> Ver detalle proyecto</button>
+                        </div>  
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-1"></div> 
+    </div>
+ </div>
+
+
+

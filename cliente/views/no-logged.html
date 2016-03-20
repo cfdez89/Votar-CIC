@@ -1,0 +1,36 @@
+<div id="no-logged" class="row">
+
+    <div class="col-md-1"></div>
+    <!--global nav bar-->
+    <div class="col-md-10">
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" ui-sref="#">Votar</a>
+                </div>
+                <div class="navbar-collapse collapse" >
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a ui-sref="home">Competiciones</a></li>
+                        <li><a ui-sref="about">Acerca de</a></li> 
+                        <li><a ui-sref="login">Acceder</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>    
+    </div>
+    <div class="col-md-1"></div> 
+
+    <div class="ui-base">
+        <div ui-view />
+    </div>
+    <footer class="footer">
+        <div class="container" align="center">
+            <p class="text-muted">2016 @ Todos los derechos reservados. Votar.</p>
+        </div>
+    </footer>
+</div>

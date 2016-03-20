@@ -1,0 +1,40 @@
+<div id="project" ng-controller="projectController" >
+    <br class="clear" />
+    <br><br/>
+<!--div for company avatar-->
+    <div class="row">
+        <div class="col-md-4"></div> 
+        <div class="col-md-4" align="center">
+            <div flash-message="4000" ></div> 
+            <br><br/>
+        </div>
+        <div class="col-md-4"></div> 
+    </div>
+    <div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-md-10" >
+            <div class="col-md-2"></div>
+            <div class="col-md-8" align="center">
+                <img ng-src="{{project.picture}}" class="img-rounded">
+                <h1>{{project.name}}</h1>
+                
+                <p>{{project.description}}
+                <!--<br/>Cantidad de votos: {{project.votes}}</p>-->
+                <hr>
+                <div>
+                    <ng-gallery images="images"></ng-gallery>
+                </div>
+                 <hr>
+            </div>
+            <div class="col-md-2"></div>   
+        </div>
+        <div class="col-md-1"></div> 
+    </div>
+     <div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-md-10" >
+            
+        </div>
+        <div class="col-md-1"></div> 
+    </div>
+ </div>
